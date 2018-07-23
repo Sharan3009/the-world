@@ -1,0 +1,7 @@
+<div class="card card-margin border border-warning">
+  <img class="card-img-top" [src]="imgUrl" alt="no image for recent region added">
+  <div class="card-body bg-light-gray">
+    <h5 class="card-title">{{regionName}}</h5>
+    <a [routerLink]="['/countries','region',regionName]" class="btn btn-primary">Explore</a>
+  </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center border-bottom">
+      <h1>Names</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Name</b>
+    </div>
+    <div class="col-6">
+      {{name}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Native Name</b>
+    </div>
+    <div class="col-6">
+      {{nativeName}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Capital</b>
+    </div>
+    <div class="col-6">
+      {{capital}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Alternate Names</b>
+    </div>
+    <div class="col-6">
+      <span *ngFor="let altName of altNames; let last = last;">
+        {{altName}}{{last?'':','}}
+      </span>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Translations</b>
+    </div>
+    <div class="col-6">
+      <a *ngIf="!show" class="text-primary" (click)="show=translationKeys.length">show all</a>
+      <a *ngIf="show" class="text-primary" (click)="show=0">show less</a>
+    </div>
+  </div>
+  <div class="row" *ngFor="let translate of translationKeys | slice:0:show">
+    <div class="col-6 d-flex justify-content-end">
+      {{translate}}
+    </div>
+    <div class="col-6 border-bottom" *ngIf="translations[translate]!=null">
+      <div>
+        {{translations[translate]}}
+      </div>
+    </div>
+    <div class="col-6 border-bottom" *ngIf="translations[translate]==null">
+        <div>
+          N/A
+        </div>
+      </div>
+  </div>
+</div>

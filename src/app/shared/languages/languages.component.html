@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="row text-center border-bottom">
+    <div class="col">
+      <h1>Languages</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Native Language</b>
+    </div>
+    <div class="col-6">
+      <a [routerLink]="['/countries','lang',nativeLanguage.iso639_2]">{{nativeLanguage.name}}</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 text-center">
+      <b style="text-decoration:underline;">Languages</b>
+    </div>
+    </div>
+      <div class="row" *ngFor="let language of languages">
+        <div class="col-6 d-flex justify-content-end">
+          {{language.iso639_2}}
+        </div>
+        <div class="col-6">
+          <a [routerLink]="['/countries','lang',language.iso639_2]">{{language.name}}</a>
+        </div>
+      </div>
+    
+  </div>

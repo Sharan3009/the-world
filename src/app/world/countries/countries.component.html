@@ -1,0 +1,46 @@
+<app-header></app-header><br>
+<div class="container">
+  <div class="row no-gutters">
+    <div class="col-4 d-flex justify-content-center col-lg-2">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+          aria-expanded="false">
+          Sort By
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <a class="dropdown-item" style="cursor:pointer;" (click)="sortName='name';sortBool=false">Ascending</a>
+          <a class="dropdown-item" style="cursor:pointer;" (click)="sortName='name';sortBool=true">Descending</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-7 col-lg-9 d-lg-flex flex-direction-row">
+      <input type="text" class="form-control normal-input" [(ngModel)]="search.name" placeholder="Start Typing...">
+    </div>
+    <div class="col-1 d-flex align-items-end">
+      <span class="input-group-btn">
+        <button class="btn btn-default bg-warning" type="button">
+          <i class="fa fa-search"></i>
+        </button>
+      </span>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+    <div>
+      <button type="button" class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back</button>
+    </div>
+  </div>
+<div class="container" *ngIf="countries.length!=0">
+  <div class="row">
+    <app-country-card class="col-12 col-lg-4" *ngFor="let country of countries | filterBy : search | orderBy : sortName : sortBool"
+      [imgUrl]="country.flag" [countryName]="country.name" [capital]="country.capital" [subregion]="country.subregion" [population]="country.population"
+      [area]="country.area"></app-country-card>
+  </div>
+  <br>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="text-danger" *ngIf="(countries | filterBy: search).length ===0 ">No country Found</div>
+    </div>
+  </div>
+</div>

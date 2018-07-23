@@ -1,0 +1,55 @@
+<div class="container">
+  <div class="row text-center border-bottom">
+    <div class="col">
+      <h1>Codes</h1>
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-6  d-flex justify-content-end">
+        <b>ISO 3166-1 alpha-2</b>
+      </div>
+      <div class="col-6">
+        {{alpha2Code}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <b>ISO 3166-1 alpha-3</b>
+      </div>
+      <div class="col-6">
+        {{alpha3Code}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <b>ISO 3166-1 numeric</b>
+      </div>
+      <div class="col-6">
+        {{numericCode}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <b>International calling code</b>
+      </div>
+      <div class="col-6">
+        {{callingCodes}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <b>ISO 4217 currency code</b>
+      </div>
+      <div class="col-6">
+          <span *ngFor="let currency of currencies; let isLast = last"><a *ngIf="currency.code!=null" [routerLink]="['/countries','currency',currency.code]">{{currency.code}}</a>{{isLast?'':','}}</span>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 d-flex justify-content-end">
+        <b>Top level domain</b>
+      </div>
+      <div class="col-6">
+        {{topLevelDomain}}
+      </div>
+    </div>
+    </div>

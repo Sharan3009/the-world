@@ -1,0 +1,36 @@
+<app-header></app-header><br>
+<div class="container">
+    <div>
+      <button type="button" class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back</button>
+    </div>
+  </div>
+<div class="container-full text-warning col-margin" *ngIf="country!=undefined">
+  <div class="row d-flex justify-content-center">
+    <div class="col-lg-6 col-12">
+        <img [src]="country[0].flag" style="width:100%;">
+    </div>
+  </div>
+  <div class="row">
+      <div class="col-12 bold">
+          <h1>{{country[0].name}}</h1>
+      </div>
+    </div>
+</div>
+<div class="container text-light" *ngIf="country!=undefined">
+  <div class="row">
+      <div class="col-lg-6 col-12 col-margin">
+        <app-codes [alpha2Code]="country[0].alpha2Code" [alpha3Code]="country[0].alpha3Code" [numericCode]="country[0].numericCode" [callingCodes]="country[0].callingCodes" [currencies]="country[0].currencies" [topLevelDomain]="country[0].topLevelDomain" (notify)="getCountriesWithCurrency($event)"></app-codes>
+      </div>
+      <div class="col-lg-6 col-12 col-margin">
+        <app-geography [region]="country[0].region" [subregion]="country[0].subregion" [capital]="country[0].capital" [demonym]="country[0].demonym" [latlng]="country[0].latlng" [area]="country[0].area" [borders]="country[0].borders"></app-geography>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-6 col-12 col-margin">
+          <app-languages [languages] = "country[0].languages"></app-languages>
+      </div>
+      <div class="col-lg-6 col-12 col-margin">
+          <app-names [name]="country[0].name" [nativeName]="country[0].nativeName" [capital]="country[0].capital" [altNames]="country[0].altSpellings" [translations]="country[0].translations"></app-names>
+      </div>
+    </div>
+</div>
