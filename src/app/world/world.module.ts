@@ -9,6 +9,8 @@ import { SharedModule } from '../shared/shared.module';
 import { OrderModule } from 'ngx-order-pipe';
 import { FilterPipeModule } from 'ngx-filter-pipe';
 import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   imports: [
@@ -18,6 +20,8 @@ import { FormsModule } from '@angular/forms';
     OrderModule,
     FilterPipeModule,
     FormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
     RouterModule.forChild([
       { path: 'home', component: RegionsComponent },
       { path: '', redirectTo: 'home', pathMatch: 'full' },
