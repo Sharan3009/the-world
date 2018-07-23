@@ -9,56 +9,77 @@
     <div class="col-6  d-flex justify-content-end">
       <b>Region</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="region">
       {{region}}
+    </div>
+    <div class="col-6" *ngIf="!region">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Sub Region</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="subregion">
       {{subregion}}
+    </div>
+    <div class="col-6" *ngIf="!subregion">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Capital</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="capital">
       {{capital}}
+    </div>
+    <div class="col-6" *ngIf="!capital">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end ">
       <b>Demonym</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="demonym">
       {{demonym}}
+    </div>
+    <div class="col-6" *ngIf="!demonym">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Lat/Lng</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="latlng">
       <a href="https://www.openstreetmap.org/#map=5/{{latlng[0]}}/{{latlng[1]}}" target="_blank">{{latlng}}</a>
+    </div>
+    <div class="col-6" *ngIf="!latlng">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Area</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="area">
       {{area}}
+    </div>
+    <div class="col-6" *ngIf="!area">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Borders</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="borders.length!=0">
       {{borders}}
+    </div>
+    <div class="col-6" *ngIf="borders.length==0">
+      N/A
     </div>
   </div>
 </div>

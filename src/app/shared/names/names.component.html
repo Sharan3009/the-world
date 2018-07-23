@@ -17,26 +17,35 @@
     <div class="col-6 d-flex justify-content-end">
       <b>Native Name</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="nativeName">
       {{nativeName}}
+    </div>
+    <div class="col-6" *ngIf="!nativeName">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Capital</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="capital">
       {{capital}}
+    </div>
+    <div class="col-6" *ngIf="!capital">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Alternate Names</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="altNames.length!=0">
       <span *ngFor="let altName of altNames; let last = last;">
         {{altName}}{{last?'':','}}
       </span>
+    </div>
+    <div class="col-6" *ngIf="altNames.length==0">
+      N/A
     </div>
   </div>
   <div class="row">

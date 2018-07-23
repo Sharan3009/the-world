@@ -9,50 +9,68 @@
     <div class="col-6  d-flex justify-content-end">
       <b>ISO 3166-1 alpha-2</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="alpha2Code">
       {{alpha2Code}}
+    </div>
+    <div class="col-6" *ngIf="!alpha2Code">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>ISO 3166-1 alpha-3</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="alpha3Code">
       {{alpha3Code}}
+    </div>
+    <div class="col-6" *ngIf="!alpha3Code">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>ISO 3166-1 numeric</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="numericCode">
       {{numericCode}}
+    </div>
+    <div class="col-6" *ngIf="!numericCode">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>International calling code</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="callingCodes.length!=0">
       {{callingCodes}}
+    </div>
+    <div class="col-6" *ngIf="callingCodes.length==0">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>ISO 4217 currency code</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="currencies.length!=0">
       <!-- checking currency.code should not be null -->
       <span *ngFor="let currency of currencies; let isLast = last">
         <a *ngIf="currency.code!=null" [routerLink]="['/countries','currency',currency.code]">{{currency.code}}</a>{{isLast?'':','}}</span>
+    </div>
+    <div class="col-6" *ngIf="currencies.length==0">
+      N/A
     </div>
   </div>
   <div class="row">
     <div class="col-6 d-flex justify-content-end">
       <b>Top level domain</b>
     </div>
-    <div class="col-6">
+    <div class="col-6" *ngIf="topLevelDomain.length!=0">
       {{topLevelDomain}}
+    </div>
+    <div class="col-6" *ngIf="topLevelDomain.length==0">
+      N/A
     </div>
   </div>
 </div>
