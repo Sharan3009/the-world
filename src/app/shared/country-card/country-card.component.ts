@@ -17,5 +17,5 @@ export class CountryCardComponent implements OnInit, CountryCards {
   constructor() { }
 
   ngOnInit() {
-  }
+    }
 }

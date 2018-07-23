@@ -26,11 +26,12 @@ export class CountriesComponent implements OnInit, Countries {
     if (filter.toLowerCase() == 'region') {
       this.title = filterName;
     }
-    else if (filter.toLowerCase() == 'currency'){
-      this.toastr.success(`Currency : ${filterName}`,'Showing all countries with filter')
+    //applying toastr when filtered by currency or language
+    else if(filter.toLowerCase()=='currency'){
+      setTimeout(()=>this.toastr.success(`Currency: ${filterName}`,'Showing all countries with filter'))
     }
-    else if (filter.toLowerCase() == 'lang'){
-      this.toastr.success(`Language : ${filterName}`,'Showing all countries with filter')
+    else if(filter.toLowerCase()=='lang'){
+      setTimeout(()=>this.toastr.success(`Language: ${filterName}`,'Showing all countries with filter'))
     }
     else{
       //do nothing
