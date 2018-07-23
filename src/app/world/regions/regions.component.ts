@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { RestcountriesService } from '../../restcountries.service';
+import { Regions } from './regions';
 
 @Component({
   selector: 'app-regions',
   templateUrl: './regions.component.html',
   styleUrls: ['./regions.component.css']
 })
-export class RegionsComponent implements OnInit {
+export class RegionsComponent implements OnInit,Regions {
   public allRegions=[];
   constructor(private httpService:RestcountriesService) { }
 

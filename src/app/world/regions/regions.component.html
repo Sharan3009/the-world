@@ -1,6 +1,6 @@
 <app-header></app-header><br>
 <div class="container" *ngIf="allRegions.length!=0">
   <div class="row">
-      <app-region-card class="col-12 col-lg-6" *ngFor="let region of allRegions" imgUrl="./assets/images/{{region}}.jpg" [regionName]="region"></app-region-card>
+      <app-region-card class="col-12 col-lg-6 card-padding" *ngFor="let region of allRegions" imgUrl="./assets/images/{{region}}.jpg" [regionName]="region"></app-region-card>
 </div>
 </div>

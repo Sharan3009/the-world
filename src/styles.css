@@ -5,3 +5,11 @@
 .bg-light-gray{
     background-color:#D0CECF;
 }
+.card-padding{
+    padding:5px;
+    transition: transform .2s;
+}
+.card-padding:hover {
+    transform: scale(1.1);
+    z-index: 10;
+}
