@@ -6,9 +6,10 @@ import { Languages } from './languages';
   templateUrl: './languages.component.html',
   styleUrls: ['./languages.component.css']
 })
-export class LanguagesComponent implements OnInit,Languages {
-  public nativeLanguage:any;
-  @Input() languages=[];
+export class LanguagesComponent implements OnInit, Languages {
+  public nativeLanguage: any;
+  // taking input of langauges array from parent component
+  @Input() languages = [];
   constructor() { }
 
   ngOnInit() {

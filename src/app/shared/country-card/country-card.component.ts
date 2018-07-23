@@ -6,8 +6,8 @@ import { CountryCards } from './country-card';
   templateUrl: './country-card.component.html',
   styleUrls: ['./country-card.component.css']
 })
-export class CountryCardComponent implements OnInit,CountryCards {
-
+export class CountryCardComponent implements OnInit, CountryCards {
+  // taking input from the parent component
   @Input() imgUrl
   @Input() countryName
   @Input() capital

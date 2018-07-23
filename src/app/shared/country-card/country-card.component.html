@@ -1,19 +1,28 @@
+<!-- countries of the clicked region, currency or language with various values -->
 <div class="card card-margin border border-warning">
   <img class="card-img-top" [src]="imgUrl" alt="Card image cap" style="height:30vh;">
   <div class="card-body bg-light-gray">
     <h5 class="card-title">{{countryName}}</h5>
     <p class="card-text">
-      <span *ngIf="capital"><b>Capital:</b> {{capital}}</span>
-      <span *ngIf="!capital"><b>Capital:</b> N/A</span>
+      <span *ngIf="capital">
+        <b>Capital:</b> {{capital}}</span>
+      <span *ngIf="!capital">
+        <b>Capital:</b> N/A</span>
       <br>
-      <span *ngIf="subregion"><b>Sub Region:</b> {{subregion}}</span>
-      <span *ngIf="!subregion"><b>Sub Region:</b> N/A</span>
+      <span *ngIf="subregion">
+        <b>Sub Region:</b> {{subregion}}</span>
+      <span *ngIf="!subregion">
+        <b>Sub Region:</b> N/A</span>
       <br>
-      <span *ngIf="population"><b>Population:</b> {{population}}</span>
-      <span *ngIf="!population"><b>Population:</b> N/A</span>
+      <span *ngIf="population">
+        <b>Population:</b> {{population}}</span>
+      <span *ngIf="!population">
+        <b>Population:</b> N/A</span>
       <br>
-      <span *ngIf="area"><b>Area:</b> {{area}}</span>
-      <span *ngIf="!area"><b>Area:</b> N/A</span>
+      <span *ngIf="area">
+        <b>Area:</b> {{area}}</span>
+      <span *ngIf="!area">
+        <b>Area:</b> N/A</span>
     </p>
     <button [routerLink]="['/country',countryName]" class="btn btn-primary">Details</button>
   </div>

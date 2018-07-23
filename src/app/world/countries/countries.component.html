@@ -1,10 +1,13 @@
-<app-header></app-header><br>
+<!-- countries view -->
+<app-header></app-header>
+<br>
 <div class="container">
   <div class="row no-gutters">
     <div class="col-4 d-flex justify-content-center col-lg-2">
       <div class="dropdown">
         <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
           aria-expanded="false">
+          <!-- sorting by ascending and descneding -->
           Sort By
         </button>
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
@@ -13,6 +16,7 @@
         </div>
       </div>
     </div>
+    <!-- searchbar -->
     <div class="col-7 col-lg-9 d-lg-flex flex-direction-row">
       <input type="text" class="form-control normal-input" [(ngModel)]="search.name" placeholder="Start Typing...">
     </div>
@@ -34,10 +38,10 @@
   </div>
 </div>
 <div class="container">
-    <div>
-      <button type="button" class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back</button>
-    </div>
+  <div>
+    <button type="button" class="btn btn-warning" (click)="goBackToPreviousPage()">Go Back</button>
   </div>
+</div>
 <div class="container" *ngIf="countries.length!=0">
   <div class="row">
     <app-country-card class="col-12 col-lg-4 card-padding" *ngFor="let country of countries | filterBy : search | orderBy : sortName : sortBool"

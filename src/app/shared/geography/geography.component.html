@@ -1,3 +1,4 @@
+<!-- geographical parts of the country -->
 <div class="container">
   <div class="row text-center border-bottom">
     <div class="col">
@@ -5,59 +6,59 @@
     </div>
   </div>
   <div class="row">
-      <div class="col-6  d-flex justify-content-end">
-        <b>Region</b>
-      </div>
-      <div class="col-6">
-        {{region}}
-      </div>
+    <div class="col-6  d-flex justify-content-end">
+      <b>Region</b>
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end">
-        <b>Sub Region</b>
-      </div>
-      <div class="col-6">
-        {{subregion}}
-      </div>
+    <div class="col-6">
+      {{region}}
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end">
-        <b>Capital</b>
-      </div>
-      <div class="col-6">
-        {{capital}}
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Sub Region</b>
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end ">
-        <b>Demonym</b>
-      </div>
-      <div class="col-6">
-        {{demonym}}
-      </div>
+    <div class="col-6">
+      {{subregion}}
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end">
-        <b>Lat/Lng</b>
-      </div>
-      <div class="col-6">
-        {{latlng}}
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Capital</b>
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end">
-        <b>Area</b>
-      </div>
-      <div class="col-6">
-        {{area}}
-      </div>
+    <div class="col-6">
+      {{capital}}
     </div>
-    <div class="row">
-      <div class="col-6 d-flex justify-content-end">
-        <b>Borders</b>
-      </div>
-      <div class="col-6">
-        {{borders}}
-      </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end ">
+      <b>Demonym</b>
     </div>
+    <div class="col-6">
+      {{demonym}}
     </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Lat/Lng</b>
+    </div>
+    <div class="col-6">
+      <a href="https://www.openstreetmap.org/#map=5/{{latlng[0]}}/{{latlng[1]}}" target="_blank">{{latlng}}</a>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Area</b>
+    </div>
+    <div class="col-6">
+      {{area}}
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <b>Borders</b>
+    </div>
+    <div class="col-6">
+      {{borders}}
+    </div>
+  </div>
+</div>

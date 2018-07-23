@@ -7,6 +7,7 @@ import { Geography } from './geography';
   styleUrls: ['./geography.component.css']
 })
 export class GeographyComponent implements OnInit, Geography {
+  // taking input from the parent component
   @Input() region
   @Input() subregion
   @Input() capital

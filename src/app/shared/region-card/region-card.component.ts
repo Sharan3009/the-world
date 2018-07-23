@@ -6,7 +6,8 @@ import { RegionCard } from './reigon-card';
   templateUrl: './region-card.component.html',
   styleUrls: ['./region-card.component.css']
 })
-export class RegionCardComponent implements OnInit,RegionCard {
+export class RegionCardComponent implements OnInit, RegionCard {
+  // taking input from the region component
   @Input() imgUrl;
   @Input() regionName;
 

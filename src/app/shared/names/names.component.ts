@@ -6,16 +6,17 @@ import { Component, OnInit, Input } from '@angular/core';
   styleUrls: ['./names.component.css']
 })
 export class NamesComponent implements OnInit {
-  public show:number=0;
-  @Input() name:any;
-  @Input() nativeName:any;
-  @Input() capital:any;
-  @Input() altNames:any;
-  @Input() translations:any;
-  public translationKeys:any;
+  // taking input from the parent component
+  public show: number = 0; // to display translations on the click of show more
+  @Input() name: any;
+  @Input() nativeName: any;
+  @Input() capital: any;
+  @Input() altNames: any;
+  @Input() translations: any;
+  public translationKeys: any; // extracting keys from the object for iterating thorugh it
   constructor() { }
 
   ngOnInit() {
-    this.translationKeys= Object.keys(this.translations)
+    this.translationKeys = Object.keys(this.translations)
   }
 }
