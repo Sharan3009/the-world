@@ -10,10 +10,10 @@ export class RestcountriesService {
   constructor(private http: HttpClient) { }
   
   getAllCountries():Observable<any>{
-    return this.http.get(`${this.baseUrl}/all`)
+    return this.http.get(`${this.baseUrl}/all?fields=region`)
   }
   getAllCountriesWithFilter(filter:string,filterName:string):Observable<any>{
-    return this.http.get(`${this.baseUrl}/${filter}/${filterName}`)
+    return this.http.get(`${this.baseUrl}/${filter}/${filterName}?fields=name;capital;flag;subregion;population;area`)
   }
   getCountry(countryName:string):Observable<any>{
     return this.http.get(`${this.baseUrl}/name/${countryName}?fullText=true`)
