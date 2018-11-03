@@ -1,27 +1,21 @@
-# TheWorld
+# The World
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+Get detailed information about all the countries of the world based on major regions, such as Asia, Africa, etc. It also has the feature to filter the countries of a region based on name, languages spoken and currencies used in the country. The API used for backend is https://restcountrie.eu
 
-## Development server
+[Click here](https://sharan3009.github.io/theworld/) to check the website.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+### Screenshots:
 
-## Code scaffolding
+- Home Page:
+![Home Page](screenshots/home.png)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Countries View:
+![](screenshots/countries.png)
 
-## Build
+- Country Details View:
+![](screenshots/country.png)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+### Built With
 
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+- Angular 6
+- Bootstrap
