@@ -129,5 +129,8 @@
       }
     }
   },
-  "defaultProject": "the-world"
+  "defaultProject": "the-world",
+  "cli": {
+    "defaultCollection": "@nativescript/schematics"
+  }
 }
